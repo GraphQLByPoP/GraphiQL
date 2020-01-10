@@ -36,12 +36,13 @@ In order to copy the GraphiQL under a specific path, install package [Composer I
 $ composer require oomphinc/composer-installers-extender
 ```
 
-Then, add the path in section `"extra"."installer-paths"`. For instance, this configuration will add the GraphiQL client under URL `/graphiql/`:
+Then, add package type `"graphiql-client"` in section `"extra.installer-types"`, and the custom path to the package in section `"extra.installer-paths"`. For instance, this configuration will add the GraphiQL client under URL `/graphiql/`:
 
 ``` javascript
 {
     ...
     "extra": {
+        "installer-types": ["graphiql-client"],
         "installer-paths": {
             "graphiql/": [
                 "leoloso/pop-graphiql"
