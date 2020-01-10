@@ -1,6 +1,6 @@
 {
     "name": "leoloso/pop-graphiql",
-    "type": "library",
+    "type": "graphiql-client",
     "description": "Integrate the GraphiQL client on the PoP API Demo site",
     "keywords": [
         "PoP",
