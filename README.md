@@ -30,6 +30,27 @@ $ composer require leoloso/pop-graphiql dev-master
 }
 ```
 
+In order to copy the GraphiQL under a specific path, install package [Composer Installers Extender](https://github.com/oomphinc/composer-installers-extender):
+
+``` bash
+$ composer require oomphinc/composer-installers-extender
+```
+
+Then, add the path in section `"extra"."installer-paths"`. For instance, this configuration will add the GraphiQL client under URL `/graphiql/`:
+
+``` javascript
+{
+    ...
+    "extra": {
+        "installer-paths": {
+            "graphiql/": [
+                "leoloso/pop-graphiql"
+            ]
+        }
+    }
+}
+```
+
 <!--
 ## Usage
 
