@@ -11,7 +11,6 @@
 
 Integrate the GraphiQL client on the PoP API Demo site
 
-
 ## Install
 
 Via Composer
