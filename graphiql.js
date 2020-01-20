@@ -115,6 +115,7 @@ ReactDOM.render(
     onEditQuery: onEditQuery,
     onEditVariables: onEditVariables,
     defaultVariableEditorOpen: true,
+    docExplorerOpen: true,
     onEditOperationName: onEditOperationName,
     response: "Click the \"Execute Query\" button, or press Ctrl+Enter (Command+Enter in Mac)"
   }),
