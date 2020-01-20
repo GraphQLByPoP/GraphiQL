@@ -116,8 +116,7 @@ ReactDOM.render(
     onEditVariables: onEditVariables,
     defaultVariableEditorOpen: true,
     onEditOperationName: onEditOperationName,
-    response: "Click the \"Execute Query\" button, or press Ctrl+Enter (Command+Enter in Mac)",
-    schema: null // Remove this once "__schema" is implemented
+    response: "Click the \"Execute Query\" button, or press Ctrl+Enter (Command+Enter in Mac)"
   }),
   document.getElementById('graphiql'),
 );
