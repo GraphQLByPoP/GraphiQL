@@ -86,17 +86,17 @@ If you discover any security related issues, please email leo@getpop.org instead
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/getpop/event-mutations-wp-em.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/leoloso/pop-graphiql.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/getpop/event-mutations-wp-em/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/getpop/event-mutations-wp-em.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/getpop/event-mutations-wp-em.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/getpop/event-mutations-wp-em.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/leoloso/pop-graphiql/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/leoloso/pop-graphiql.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/leoloso/pop-graphiql.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/leoloso/pop-graphiql.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/getpop/event-mutations-wp-em
-[link-travis]: https://travis-ci.org/getpop/event-mutations-wp-em
-[link-scrutinizer]: https://scrutinizer-ci.com/g/getpop/event-mutations-wp-em/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/getpop/event-mutations-wp-em
-[link-downloads]: https://packagist.org/packages/getpop/event-mutations-wp-em
+[link-packagist]: https://packagist.org/packages/leoloso/pop-graphiql
+[link-travis]: https://travis-ci.org/leoloso/pop-graphiql
+[link-scrutinizer]: https://scrutinizer-ci.com/g/leoloso/pop-graphiql/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/leoloso/pop-graphiql
+[link-downloads]: https://packagist.org/packages/leoloso/pop-graphiql
 [link-author]: https://github.com/leoloso
 [link-contributors]: ../../contributors
