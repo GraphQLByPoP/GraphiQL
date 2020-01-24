@@ -16,18 +16,7 @@ Integrate the GraphiQL client on the PoP API Demo site
 Via Composer
 
 ``` bash
-$ composer require leoloso/pop-graphiql dev-master
-```
-
-**Note:** Your `composer.json` file must have the configuration below to accept minimum stability `"dev"` (there are no releases for PoP yet, and the code is installed directly from the `master` branch):
-
-```javascript
-{
-    ...
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    ...
-}
+$ composer require leoloso/pop-graphiql
 ```
 
 In order to copy the GraphiQL under a specific path, install package [Composer Installers Extender](https://github.com/oomphinc/composer-installers-extender):
