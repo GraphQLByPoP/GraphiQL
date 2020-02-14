@@ -89,7 +89,6 @@ function strToBool(s)
     // of capitalization and regardless off surrounding white-space.
     //
     regex=/^\s*(true|1|on)\s*$/i
-
     return regex.test(s);
 }
 
@@ -97,13 +96,6 @@ function strToBool(s)
 // use fetch, and could instead implement graphQLFetcher however you like,
 // as long as it returns a Promise or Observable.
 function graphQLFetcher(graphQLParams) {
-  // When working locally, the example expects a GraphQL server at the path /graphql.
-  // In a PR preview, it connects to the Star Wars API externally.
-  // Change this to point wherever you host your GraphQL server.
-  const isDev = !window.location.hostname.match(
-    /(^|\.)getpop\.org$/,
-  );
-  // const api = isDev ? '/api/graphql/' : 'https://newapi.getpop.org/api/graphql/';
   let apiURL = '/api/graphql/';
   // Copy parameters
   if (parameters.use_namespace && strToBool(parameters.use_namespace)) {
