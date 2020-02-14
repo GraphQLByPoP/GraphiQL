@@ -92,15 +92,27 @@ function strToBool(s)
     return regex.test(s);
 }
 
+/**
+ * We can specify the endpoint through the included script, if it has param "endpoint"
+ * Or default to "/api/graphql/"
+ */
+var getScriptURL = (function() {
+  var scripts = document.getElementsByTagName('script');
+  var index = scripts.length - 1;
+  var myScript = scripts[index];
+  return function() { return myScript.src; };
+})();
+const scriptURL = new URL(getScriptURL());
+const scriptParams = new URLSearchParams(scriptURL.search);
+let apiURL = scriptParams.has('endpoint') ? scriptParams.get('endpoint') : '/api/graphql/';
+if (parameters.use_namespace && strToBool(parameters.use_namespace)) {
+  apiURL += '?use_namespace=true';
+}
+
 // Defines a GraphQL fetcher using the fetch API. You're not required to
 // use fetch, and could instead implement graphQLFetcher however you like,
 // as long as it returns a Promise or Observable.
 function graphQLFetcher(graphQLParams) {
-  let apiURL = '/api/graphql/';
-  // Copy parameters
-  if (parameters.use_namespace && strToBool(parameters.use_namespace)) {
-    apiURL += '?use_namespace=true';
-  }
   return fetch(apiURL, {
     method: 'post',
     headers: {
