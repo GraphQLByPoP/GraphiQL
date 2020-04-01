@@ -116,9 +116,9 @@ if (parameters.versionConstraint || scriptParams.has('versionConstraint')) {
   apiURL += (apiURLHasParams ? '&' : '?') + 'versionConstraint='+(parameters.versionConstraint || scriptParams.get('versionConstraint'));
   apiURLHasParams = true;
 }
-// Provide "actions" param either through URL or through script source
-if (parameters.actions || scriptParams.has('actions')) {
-  apiURL += (apiURLHasParams ? '&' : '?') + 'actions='+(parameters.actions || scriptParams.get('actions'));
+// Provide "show_logs" param either through URL or through script source
+if ((parameters.show_logs && strToBool(parameters.show_logs)) || (scriptParams.has('show_logs') && strToBool(scriptParams.get('show_logs')))) {
+  apiURL += (apiURLHasParams ? '&' : '?') + 'actions[]=show-logs';
   apiURLHasParams = true;
 }
 
