@@ -116,6 +116,11 @@ if (parameters.versionConstraint || scriptParams.has('versionConstraint')) {
   apiURL += (apiURLHasParams ? '&' : '?') + 'versionConstraint='+(parameters.versionConstraint || scriptParams.get('versionConstraint'));
   apiURLHasParams = true;
 }
+// Provide "actions" param either through URL or through script source
+if (parameters.actions || scriptParams.has('actions')) {
+  apiURL += (apiURLHasParams ? '&' : '?') + 'actions='+(parameters.actions || scriptParams.get('actions'));
+  apiURLHasParams = true;
+}
 
 // Defines a GraphQL fetcher using the fetch API. You're not required to
 // use fetch, and could instead implement graphQLFetcher however you like,
