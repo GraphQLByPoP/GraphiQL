@@ -126,6 +126,38 @@ if ((parameters.edit_schema && strToBool(parameters.edit_schema)) || (scriptPara
   apiURL += (apiURLHasParams ? '&' : '?') + 'edit_schema=true';
   apiURLHasParams = true;
 }
+// Provide "fieldVersionConstraints[]" param either through URL or through script source
+let fieldVersionConstraints = {};
+Object.keys(parameters).filter(key => key.startsWith('fieldVersionConstraints[')).forEach(function(key) {
+  fieldVersionConstraints[key] = parameters[key];
+})
+for (var pair of scriptParams.entries()) {
+  if (pair[0].startsWith('fieldVersionConstraints[')) {
+    fieldVersionConstraints[pair[0]] = pair[1];
+  }
+}
+if (Object.keys(fieldVersionConstraints).length) {
+  Object.keys(fieldVersionConstraints).forEach(function(key) {
+    apiURL += (apiURLHasParams ? '&' : '?') + key + '=' + fieldVersionConstraints[key];
+    apiURLHasParams = true;
+  })
+}
+// Provide "directiveVersionConstraints[]" param either through URL or through script source
+let directiveVersionConstraints = {};
+Object.keys(parameters).filter(key => key.startsWith('directiveVersionConstraints[')).forEach(function(key) {
+  directiveVersionConstraints[key] = parameters[key];
+})
+for (var pair of scriptParams.entries()) {
+  if (pair[0].startsWith('directiveVersionConstraints[')) {
+    directiveVersionConstraints[pair[0]] = pair[1];
+  }
+}
+if (Object.keys(directiveVersionConstraints).length) {
+  Object.keys(directiveVersionConstraints).forEach(function(key) {
+    apiURL += (apiURLHasParams ? '&' : '?') + key + '=' + directiveVersionConstraints[key];
+    apiURLHasParams = true;
+  })
+}
 
 // Defines a GraphQL fetcher using the fetch API. You're not required to
 // use fetch, and could instead implement graphQLFetcher however you like,
