@@ -4,21 +4,23 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    <title>PoP API - GraphiQL</title>
+    <title>GraphiQL</title>
+    <link href="styles.css" rel="stylesheet" />
+
     <!-- Source: https://unpkg.com/graphiql/graphiql.min.css -->
     <link href="assets/graphiql.min.css" rel="stylesheet" />
   </head>
   <body style="margin: 0;">
     <div id="graphiql" style="height: 100vh;"></div>
 
-    <!-- Source: https://unpkg.com/react/umd/react.production.min.js -->
-    <script crossorigin src="assets/react.production.min.js"></script>
-    <!-- Source: https://unpkg.com/react-dom/umd/react-dom.production.min.js -->
-    <script crossorigin src="assets/react-dom.production.min.js"></script>
-    <!-- Source: https://unpkg.com/graphiql/graphiql.min.js -->
-    <script crossorigin src="assets/graphiql.min.js"></script>
+    <!-- Source (must add attr crossorigin): https://unpkg.com/react/umd/react.production.min.js -->
+    <script src="assets/react.production.min.js" type="application/javascript"></script>
+    <!-- Source (must add attr crossorigin): https://unpkg.com/react-dom/umd/react-dom.production.min.js -->
+    <script src="assets/react-dom.production.min.js" type="application/javascript"></script>
+    <!-- Source (must add attr crossorigin): https://unpkg.com/graphiql/graphiql.min.js -->
+    <script src="assets/graphiql.min.js" type="application/javascript"></script>
 
-    <div id="graphiql">Loading...</div>
+    <div id="graphiql"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
     <script defer src="graphiql.js?version=1.8" type="application/javascript"></script>
   </body>
 </html>
