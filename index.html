@@ -5,23 +5,18 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <title>PoP API - GraphiQL</title>
-    <link href="https://unpkg.com/graphiql/graphiql.min.css" rel="stylesheet" />
+    <!-- Source: https://unpkg.com/graphiql/graphiql.min.css -->
+    <link href="assets/graphiql.min.css" rel="stylesheet" />
   </head>
   <body style="margin: 0;">
     <div id="graphiql" style="height: 100vh;"></div>
 
-    <script
-      crossorigin
-      src="https://unpkg.com/react/umd/react.production.min.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/graphiql/graphiql.min.js"
-    ></script>
+    <!-- Source: https://unpkg.com/react/umd/react.production.min.js -->
+    <script crossorigin src="assets/react.production.min.js"></script>
+    <!-- Source: https://unpkg.com/react-dom/umd/react-dom.production.min.js -->
+    <script crossorigin src="assets/react-dom.production.min.js"></script>
+    <!-- Source: https://unpkg.com/graphiql/graphiql.min.js -->
+    <script crossorigin src="assets/graphiql.min.js"></script>
 
     <div id="graphiql">Loading...</div>
     <script defer src="graphiql.js?version=1.7" type="application/javascript"></script>
