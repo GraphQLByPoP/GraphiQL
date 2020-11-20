@@ -126,6 +126,11 @@ if ((parameters.edit_schema && strToBool(parameters.edit_schema)) || (scriptPara
   apiURL += (apiURLHasParams ? '&' : '?') + 'edit_schema=true';
   apiURLHasParams = true;
 }
+// Provide "mutation_scheme" param either through URL or through script source
+if (parameters.mutation_scheme || scriptParams.has('mutation_scheme')) {
+  apiURL += (apiURLHasParams ? '&' : '?') + 'mutation_scheme=' + (parameters.mutation_scheme || scriptParams.get('mutation_scheme'));
+  apiURLHasParams = true;
+}
 // Provide "fieldVersionConstraints[]" param either through URL or through script source
 let fieldVersionConstraints = {};
 Object.keys(parameters).filter(key => key.startsWith('fieldVersionConstraints[')).forEach(function(key) {
