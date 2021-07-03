@@ -16,7 +16,7 @@ Integrate the GraphiQL client on the PoP API Demo site
 Via Composer
 
 ``` bash
-$ composer require leoloso/pop-graphiql
+$ composer require pop-api-demo-site/pop-graphiql
 ```
 
 In order to copy the GraphiQL under a specific path, install package [Composer Installers Extender](https://github.com/oomphinc/composer-installers-extender):
