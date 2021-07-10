@@ -1,4 +1,4 @@
-# PoP GraphiQL
+# GraphiQL
 
 <!--
 [![Latest Version on Packagist][ico-version]][link-packagist]
@@ -9,14 +9,14 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 -->
 
-Integrate the GraphiQL client on the PoP API Demo site
+[GraphiQL](https://github.com/graphql/graphiql/tree/main/packages/graphiql) client, to be integrated with GraphQL by PoP
 
 ## Install
 
 Via Composer
 
 ``` bash
-$ composer require pop-api-demo-site/pop-graphiql
+$ composer require graphql-by-pop/graphiql-client
 ```
 
 In order to copy the GraphiQL under a specific path, install package [Composer Installers Extender](https://github.com/oomphinc/composer-installers-extender):
@@ -34,7 +34,7 @@ Then, add package type `"graphiql-client"` in section `"extra.installer-types"`,
         "installer-types": ["graphiql-client"],
         "installer-paths": {
             "graphiql/": [
-                "leoloso/pop-graphiql"
+                "graphql-by-pop/graphiql-client"
             ]
         }
     }

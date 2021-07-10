@@ -1,13 +1,13 @@
 {
-    "name": "pop-api-demo-site/pop-graphiql",
+    "name": "graphql-by-pop/graphiql-client",
     "type": "graphiql-client",
-    "description": "Integrate the GraphiQL client on the PoP API Demo site",
+    "description": "GraphiQL client",
     "keywords": [
         "PoP",
         "GraphQL",
         "GraphiQL"
     ],
-    "homepage": "https://github.com/leoloso/PoP-GraphiQL",
+    "homepage": "https://github.com/GraphQLByPoP/GraphiQL",
     "license": "MIT",
     "authors": [
         {
